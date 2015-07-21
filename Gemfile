@@ -39,6 +39,8 @@ gem 'rails-api'
 
 gem 'puma'
 
+gem 'awesome_nested_set', '~> 3.0.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
