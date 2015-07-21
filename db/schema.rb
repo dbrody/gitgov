@@ -11,10 +11,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411003152) do
+ActiveRecord::Schema.define(version: 20150721044432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "action_fluffs", force: true do |t|
+    t.integer  "user_id",             limit: 8
+    t.integer  "document_element_id", limit: 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "action_fluffs", ["document_element_id"], name: "index_action_fluffs_on_document_element_id", using: :btree
+  add_index "action_fluffs", ["user_id", "document_element_id"], name: "index_action_fluffs_on_user_id_and_document_element_id", unique: true, using: :btree
+  add_index "action_fluffs", ["user_id"], name: "index_action_fluffs_on_user_id", using: :btree
+
+  create_table "action_importances", force: true do |t|
+    t.integer  "user_id",             limit: 8
+    t.integer  "document_element_id", limit: 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "action_importances", ["document_element_id"], name: "index_action_importances_on_document_element_id", using: :btree
+  add_index "action_importances", ["user_id", "document_element_id"], name: "index_action_importances_on_user_id_and_document_element_id", unique: true, using: :btree
+  add_index "action_importances", ["user_id"], name: "index_action_importances_on_user_id", using: :btree
+
+  create_table "action_suspicions", force: true do |t|
+    t.integer  "user_id",             limit: 8
+    t.integer  "document_element_id", limit: 8
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "action_suspicions", ["document_element_id"], name: "index_action_suspicions_on_document_element_id", using: :btree
+  add_index "action_suspicions", ["user_id", "document_element_id"], name: "index_action_suspicions_on_user_id_and_document_element_id", unique: true, using: :btree
+  add_index "action_suspicions", ["user_id"], name: "index_action_suspicions_on_user_id", using: :btree
+
+  create_table "document_elements", force: true do |t|
+    t.integer  "document_id", limit: 8
+    t.string   "type"
+    t.integer  "parent_id",   limit: 8
+    t.integer  "position"
+    t.string   "numeral"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "document_elements", ["document_id"], name: "index_document_elements_on_document_id", using: :btree
+  add_index "document_elements", ["parent_id"], name: "index_document_elements_on_parent_id", using: :btree
+
+  create_table "documents", force: true do |t|
+    t.string   "name"
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "moments", force: true do |t|
     t.string   "type"

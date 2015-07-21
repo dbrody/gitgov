@@ -8,10 +8,13 @@ class User < ActiveRecord::Base
          :confirmable
 
   # before_save -> do
-  #   self.uid = email if uid.blank? 
+  #   self.uid = email if uid.blank?
   #   skip_confirmation!
   # end
 
+  has_many :action_fluffs, inverse_of: :user, dependent: :destroy
+  has_many :action_suspicions, inverse_of: :user, dependent: :destroy
+  has_many :action_importances, inverse_of: :user, dependent: :destroy
   has_many :moments
 
   validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
