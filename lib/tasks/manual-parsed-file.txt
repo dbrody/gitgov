@@ -1,18 +1,18 @@
-Joint Comprehensive Plan of Action
+[TITLE] Joint Comprehensive Plan of Action
 
-Vienna, 14 July 2015
+[DATE] Vienna, 14 July 2015
 
 * 0.
 
 ** PREFACE
 
-The E3/EU+3 (China, France, Germany, the Russian Federation, the United Kingdom and the United States, with the High Representative of the European Union for Foreign Affairs and Security Policy) and the Islamic Republic of Iran welcome this historic Joint Comprehensive Plan of Action (JCPOA), which will ensure that Iran’s nuclear programme will be exclusively peaceful, and mark a fundamental shift in their approach to this issue. They anticipate that full implementation of this JCPOA will positively contribute to regional and international peace and security. Iran reaffirms that under no circumstances will Iran ever seek, develop or acquire any nuclear weapons.
+[PREFACE] The E3/EU+3 (China, France, Germany, the Russian Federation, the United Kingdom and the United States, with the High Representative of the European Union for Foreign Affairs and Security Policy) and the Islamic Republic of Iran welcome this historic Joint Comprehensive Plan of Action (JCPOA), which will ensure that Iran’s nuclear programme will be exclusively peaceful, and mark a fundamental shift in their approach to this issue. They anticipate that full implementation of this JCPOA will positively contribute to regional and international peace and security. Iran reaffirms that under no circumstances will Iran ever seek, develop or acquire any nuclear weapons.
 
-Iran envisions that this JCPOA will allow it to move forward with an exclusively peaceful, indigenous nuclear programme, in line with scientific and economic considerations, in accordance with the JCPOA, and with a view to building confidence and encouraging international cooperation. In this context, the initial mutually determined limitations described in this JCPOA will be followed by a gradual evolution, at a reasonable pace, of Iran’s peaceful nuclear programme, including its enrichment activities, to a commercial programme for exclusively peaceful purposes, consistent with international non-proliferation norms.
+[PREFACE] Iran envisions that this JCPOA will allow it to move forward with an exclusively peaceful, indigenous nuclear programme, in line with scientific and economic considerations, in accordance with the JCPOA, and with a view to building confidence and encouraging international cooperation. In this context, the initial mutually determined limitations described in this JCPOA will be followed by a gradual evolution, at a reasonable pace, of Iran’s peaceful nuclear programme, including its enrichment activities, to a commercial programme for exclusively peaceful purposes, consistent with international non-proliferation norms.
 
-The E3/EU+3 envision that the implementation of this JCPOA will progressively allow them to gain confidence in the exclusively peaceful nature of Iran’s programme. The JCPOA reflects mutually determined parameters, consistent with practical needs, with agreed limits on the scope of Iran’s nuclear programme, including enrichment activities and R&D. The JCPOA addresses the E3/EU+3’s concerns, including through comprehensive measures providing for transparency and verification.
+[PREFACE] The E3/EU+3 envision that the implementation of this JCPOA will progressively allow them to gain confidence in the exclusively peaceful nature of Iran’s programme. The JCPOA reflects mutually determined parameters, consistent with practical needs, with agreed limits on the scope of Iran’s nuclear programme, including enrichment activities and R&D. The JCPOA addresses the E3/EU+3’s concerns, including through comprehensive measures providing for transparency and verification.
 
-The JCPOA will produce the comprehensive lifting of all UN Security Council sanctions as well as multilateral and national sanctions related to Iran’s nuclear programme, including steps on access in areas of trade, technology, finance, and energy.
+[PREFACE] The JCPOA will produce the comprehensive lifting of all UN Security Council sanctions as well as multilateral and national sanctions related to Iran’s nuclear programme, including steps on access in areas of trade, technology, finance, and energy.
 
 ** PREAMBLE AND GENERAL PROVISIONS
 
@@ -224,10 +224,10 @@ The JCPOA will produce the comprehensive lifting of all UN Security Council sanc
 
 *** 37. Upon receipt of the notification from the complaining participant, as describedabove, including a description of the good-faith efforts the participant made toexhaust the dispute resolution process specified in this JCPOA, the UN SecurityCouncil, in accordance with its procedures, shall vote on a resolution tocontinue the sanctions lifting. If the resolution described above has not beenadopted within 30 days of the notification, then the provisions of the old UNSecurity Council resolutions would be re-imposed, unless the UN SecurityCouncil decides otherwise. In such event, these provisions would not apply withretroactive effect to contracts signed between any party and Iran or Iranianindividuals and entities prior to the date of application, provided that theactivities contemplated under and execution of such contracts are consistentwith this JCPOA and the previous and current UN Security Council resolutions.The UN Security Council, expressing its intention to prevent the reapplication ofthe provisions if the issue giving rise to the notification is resolved within thisperiod, intends to take into account the views of the States involved in the issueand any opinion on the issue of the Advisory Board. Iran has stated that ifsanctions are reinstated in whole or in part, Iran will treat that as grounds tocease performing its commitments under this JCPOA in whole or in part.
 
-**** [1] The provisions of this Resolution do not constitute provisions of this JCPOA.
-**** [2] 'Government officials' for the U.S. means senior officials of the U.S. Administration.
+[1] The provisions of this Resolution do not constitute provisions of this JCPOA.
+[2] 'Government officials' for the U.S. means senior officials of the U.S. Administration.
 
-* Annex I – Nuclear-related measures
+* <Annex I> – Nuclear-related measures
 
 ** A. GENERAL
 
@@ -441,7 +441,7 @@ The JCPOA will produce the comprehensive lifting of all UN Security Council sanc
 
 *** 78. If the absence of undeclared nuclear materials and activities or activities inconsistentwith the JCPOA cannot be verified after the implementation of the alternativearrangements agreed by Iran and the IAEA, or if the two sides are unable to reachsatisfactory arrangements to verify the absence of undeclared nuclear materials andactivities or activities inconsistent with the JCPOA at the specified locations within 14days of the IAEA’s original request for access, Iran, in consultation with the members ofthe Joint Commission, would resolve the IAEA’s concerns through necessary meansagreed between Iran and the IAEA. In the absence of an agreement, the members ofthe Joint Commission, by consensus or by a vote of 5 or more of its 8 members, wouldadvise on the necessary means to resolve the IAEA's concerns. The process ofconsultation with, and any action by, the members of the Joint Commission would notexceed 7 days, and Iran would implement the necessary means within 3 additionaldays.
 
-R. CENTRIFUGE COMPONENT MANUFACTURING TRANSPARENCY
+** R. CENTRIFUGE COMPONENT MANUFACTURING TRANSPARENCY
 
 *** 79. Iran and the IAEA will take the necessary steps for containment and surveillance oncentrifuge rotor tubes and bellows for 20 years.
 
@@ -469,35 +469,35 @@ R. CENTRIFUGE COMPONENT MANUFACTURING TRANSPARENCY
 
 ** Attachment: Arak conceptual design
 
-* Fundamental Principles:
+* <Fundamental Principles:>
 
-** Maximize use of the current infrastructure of original design of Arak research reactor,designated by the IAEA as IR-40, according to their respective ratings.
+** i. Maximize use of the current infrastructure of original design of Arak research reactor,designated by the IAEA as IR-40, according to their respective ratings.
 
-** Modernizing of the original design in order to be a multi-purpose research reactorcomprising radio-isotope production, structural materials and fuel (pins and assemblyprototypes) testing and able to conduct other neutronic experiments which demandhigh neutron fluxes (more than 1014).
+** ii. Modernizing of the original design in order to be a multi-purpose research reactorcomprising radio-isotope production, structural materials and fuel (pins and assemblyprototypes) testing and able to conduct other neutronic experiments which demandhigh neutron fluxes (more than 1014).
 
-** Using heavy water as coolant, moderator and reflector. Light water would be utilized asan annular ring around the compact new core for safety reasons if necessary.
+** iii. Using heavy water as coolant, moderator and reflector. Light water would be utilized asan annular ring around the compact new core for safety reasons if necessary.
 
-** Around 78 fuel assemblies in a tight hexagonal grid spacing with the followingpreliminary characteristics will be loaded.
+** iv. Around 78 fuel assemblies in a tight hexagonal grid spacing with the followingpreliminary characteristics will be loaded.
 
-** Up to 3.67 percent enriched UO2, in the improved assembly design, will be used as fuel.
+** v. Up to 3.67 percent enriched UO2, in the improved assembly design, will be used as fuel.
 
-** Power will not exceed to 20 MWth.
+** vi. Power will not exceed to 20 MWth.
 
-** Adding different types of beam tubes to the existing beam tubes which being extendedto the edge of the new compact core.
+** vii. Adding different types of beam tubes to the existing beam tubes which being extendedto the edge of the new compact core.
 
-** Having one central channel in the center of the new core with passive cooling systemfor the purpose of structural materials and fuel pins and assembly prototypes testingwith neutron flux beyond 2•1014, twelve in-core irradiation channels (IIC) inside the coreand twelve lateral irradiation chennals (LIC) just next to the outer ring of fuel assemblies.
+** viii. Having one central channel in the center of the new core with passive cooling systemfor the purpose of structural materials and fuel pins and assembly prototypes testingwith neutron flux beyond 2•1014, twelve in-core irradiation channels (IIC) inside the coreand twelve lateral irradiation chennals (LIC) just next to the outer ring of fuel assemblies.
 
-** The location of the in-core and lateral irradiation channels should be designed and fixedto meet the best anticipated performances.
+** ix. The location of the in-core and lateral irradiation channels should be designed and fixedto meet the best anticipated performances.
 
-** Consistent with relevant section of Annex 1, sibsidiary laboratories are part of themodernization project of the Arak Research Reactor. In Addition, Annex III reinforcedesign and construction of subsidiary laboratoties.
+** x. Consistent with relevant section of Annex 1, sibsidiary laboratories are part of themodernization project of the Arak Research Reactor. In Addition, Annex III reinforcedesign and construction of subsidiary laboratoties.
 
-** The highest tolerable pressure for the first and second loop is 0.33 Mpa (at theinterance of the reactor pit).
+** xi. The highest tolerable pressure for the first and second loop is 0.33 Mpa (at theinterance of the reactor pit).
 
-** The highest possible flow rate for coolant is 610 kg/s at the pressure of 0.33 MPa in themain piping system and 42 Kg/sec for Moderator with the same conditions.
+** xii. The highest possible flow rate for coolant is 610 kg/s at the pressure of 0.33 MPa in themain piping system and 42 Kg/sec for Moderator with the same conditions.
 
-** Preliminary Characteristics:
+** xiii. Preliminary Characteristics:
 
-||Core Parameters | Values
+*** ||Core Parameters | Values
 | Power (MW) | 20
 | Number of fuel assemblies | ~ 78
 | Active length (cm) | ~ 110
