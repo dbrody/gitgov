@@ -32,15 +32,22 @@ h1,h2,h3,h4,h5,h6 {
 	}
 
 	.root_section {
-		font-size: 30px;
+		color: #999;
 		float: left;
-		margin-left: -40px;
+		margin-left: -70px;
 	}
 
 	.sub_section {
+
+		.number {
+			color: #666;
+			float: left;
+			margin-left: -30px;
+		}
+
 		font-size: 24px;
 		font-weight: bold;
-		padding: 20px 0px;
+		padding: 40px 0px 10px 0px;
 	}
 
 	.paragraph {
