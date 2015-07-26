@@ -14,7 +14,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .content_container {
-    width: 800px;
+    width: 532px;
     margin: 0px auto;
 
     .header {
@@ -31,49 +31,118 @@ h1,h2,h3,h4,h5,h6 {
 		text-align: center;
 	}
 
-	.root_section {
-		color: #999;
-		float: left;
-		margin-left: -70px;
-	}
-
-	.sub_section {
-
-		.number {
-			color: #666;
-			float: left;
-			margin-left: -30px;
-		}
-
-		font-size: 24px;
-		font-weight: bold;
-		padding: 40px 0px 10px 0px;
-	}
-
-	.paragraph {
-		padding: 20px 10px;
+	.level_0,
+	.level_1,
+	.level_2,
+	.level_3,
+	.level_4,
+	.level_5,
+	.level_6 {
+		
+		font-family: georgia,"times new roman",times,serif;
 		position: relative;
 
 		.section {
 			position: absolute;
-			top: 20px;
+			padding-right: 20px;
 			left: 0px;
 			width: 30px;
-			font-size: 20px;
 			font-weight: bold;
-			color: #CCC;
+			color: #999;
 			text-align: right;
 			margin-left: -30px;
 		}
 
 		.element_actions {
+			font-size: 14px;
 			position: absolute;
 			top: 0px;
 			right: 0px;
 			width: 100px;
-			margin-top: 30px;
+			margin-top: 10px;
 			margin-right: -100px;
+
+			.element_action {
+				padding: 2px 0px;
+
+				.btn {
+
+					width: 80px;
+					line-height: 10px;
+
+					.number {
+						font-family: Gotham;
+					}
+
+					.title {
+						color: #666;
+						font-size: 8px;
+					}
+				}
+			}
 		}
+	}
+
+	.level_0,
+	.level_1,
+	.level_2 {
+		margin-left: -70px;
+		margin-right: -70px;
+		font-size: 20px;
+		font-weight: bold;
+		padding: 30px 0px 0px 0px;
+
+		.section {
+		    top: 30px;
+	    }
+	}
+
+	.level_3 {
+		font-size: 24px;
+		font-weight: bold;
+		padding: 20px 0px 10px 0px;
+
+		.section {
+		    top: 20px;
+	    }
+	}
+
+	.level_4 {
+		font-size: 18px;
+		font-weight: bold;
+		padding: 10px 0px 10px 0px;
+
+		.section {
+		    top: 10px;
+	    }
+	}
+
+	.level_5 {
+		padding: 20px 10px;
+		line-height: 23px;
+		font-size: 16px;
+	    font-weight: 400;
+
+	    min-height: 200px;
+		
+		.section {
+		    top: 20px;
+		    padding-right: 10px;
+	    }
+	}
+
+	.level_6 {
+		padding: 5px 20px;
+		position: relative;
+		line-height: 18px;
+		font-size: 12px;
+	    font-weight: 400;
+
+	    .section {
+		    top: 5px;
+	    	font-size: 12px;
+	    	padding-right: 5px;
+	    }
 	}
 
 

@@ -8,9 +8,51 @@
  * Controller of the demoApp
  */
 angular.module('demoApp')
-  .controller('MainCtrl', ['$scope', '$modal', '$state', '$auth', '$stateParams',
-   function ($scope, $modal, $state, $auth, $stateParams) {
+  .controller('MainCtrl', ['$scope', '$http', '$modal', '$state', '$auth', '$stateParams',
+   function ($scope, $http, $modal, $state, $auth, $stateParams) {
   	var modalInstance = null;
+    
+    $scope.document_root = null;
+
+    $http.get('/api/v1/document_elements')
+      .success(function(data, status, headers, config){
+        console.log(data);
+        $scope.document = data['document']
+        $scope.document_root = data['root'];
+      })
+      .error(function(data, status, headers, config){
+
+      });
+
+    $scope.addImportance = function(element){
+      $scope.createAction(element, 'important', function(data){
+        element.importances += 1;
+      });
+    };
+
+    $scope.addSuspicion = function(element){
+      $scope.createAction(element, 'suspicion', function(data){
+        element.suspicions += 1;
+      });
+    };
+
+    $scope.addFluff = function(element){
+      $scope.createAction(element, 'fluff', function(data){
+        element.fluffs += 1;
+      });
+    };
+
+    $scope.createAction = function(element, type, cb){
+      $http.post('/api/v1/document_elements/'+element.id+"/addaction", { type: type})
+        .success(function(data, status, headers, config){
+          if(cb) cb(data)
+        })
+        .error(function(data, status, headers, config){
+          console.log("ERRORR!");
+        });
+    };
+
+
     $scope.$state = $state;
     $scope.$watch('user', function(){
     	// If user has not filled out their info, redirect to registration

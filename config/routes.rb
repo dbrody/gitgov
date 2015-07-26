@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   apipie
   scope '/api' do
     scope '/v1' do
-      get 'profile' => 'users#profile'
-      resources :moments
+      resources :document_elements
+      post '/document_elements/:id/addaction' => 'document_elements#create_action'
     end
   end
 

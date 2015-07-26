@@ -5,87 +5,39 @@
   </div>
 
   <div class="document">
-
-    <div class="title">Joint Comprehensive Plan of Action</div>
-    <div class="date">Vienna, 14 July 2015</div>
-
+    <div class="title">{{document.name}}</div>
+    <div class="date">{{document.date}}</div>
     <div class="content">
-      <div class="sub_section">
-        <div class="root_section">0.</div>
-        <div class="number">I.</div>
-        PREFACE
-      </div>
-      <div class="paragraph">
-        The E3/EU+3 (China, France, Germany, the Russian Federation, the United Kingdom and the United States, with the High Representative of the European Union for Foreign Affairs and Security Policy) and the Islamic Republic of Iran welcome this historic Joint Comprehensive Plan of Action (JCPOA), which will ensure that Iran’s nuclear programme will be exclusively peaceful, and mark a fundamental shift in their approach to this issue. They anticipate that full implementation of this JCPOA will positively contribute to regional and international peace and security. Iran reaffirms that under no circumstances will Iran ever seek, develop or acquire any nuclear weapons.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
+      <div ng-repeat="element in document_root" ng-if="element.level > 0 && element.body.length > 0" class="level_{{element.level}}">
+        <div class="section">{{element.numeral}}</div>
+        <div class="element_actions" ng-if="element.level == 5">
+          <div class="element_action">
+            <button type="button" class="btn btn-default" aria-label="Left Align"
+              ng-click="addImportance(element)">
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="number">{{element.importances}}</span>
+              <span class="title"><BR/>Important</span>
+            </button>
+          </div>
+          <div class="element_action">
+            <button type="button" class="btn btn-default" aria-label="Left Align"
+              ng-click="addSuspicion(element)">
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+              <span class="number">{{element.suspicions}}</span>
+              <span class="title"><BR/>Suspicious</span>
+            </button>
+          </div>
+          <div class="element_action">
+            <button type="button" class="btn btn-default" aria-label="Left Align"
+              ng-click="addFluff(element)">
+              <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+              <span class="number">{{element.fluffs}}</span>
+              <span class="title"><BR/>Fluff</span>
+            </button>
+          </div>
         </div>
-      </div>
-      <div class="paragraph">
-        Iran envisions that this JCPOA will allow it to move forward with an exclusively peaceful, indigenous nuclear programme, in line with scientific and economic considerations, in accordance with the JCPOA, and with a view to building confidence and encouraging international cooperation. In this context, the initial mutually determined limitations described in this JCPOA will be followed by a gradual evolution, at a reasonable pace, of Iran’s peaceful nuclear programme, including its enrichment activities, to a commercial programme for exclusively peaceful purposes, consistent with international non-proliferation norms.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
-        </div>
-      </div>
-      <div class="paragraph">
-        The E3/EU+3 envision that the implementation of this JCPOA will progressively allow them to gain confidence in the exclusively peaceful nature of Iran’s programme. The JCPOA reflects mutually determined parameters, consistent with practical needs, with agreed limits on the scope of Iran’s nuclear programme, including enrichment activities and R&D. The JCPOA addresses the E3/EU+3’s concerns, including through comprehensive measures providing for transparency and verification.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
-        </div>
-      </div>
-      <div class="paragraph">
-        The JCPOA will produce the comprehensive lifting of all UN Security Council sanctions as well as multilateral and national sanctions related to Iran’s nuclear programme, including steps on access in areas of trade, technology, finance, and energy.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
-        </div>
-      </div>
-
-
-      <div class="sub_section">
-        <div class="number">II.</div>
-        PREAMBLE AND GENERAL PROVISIONS
-      </div>
-
-      <div class="paragraph">
-        <div class="section">i.</div>
-        The JCPOA will produce the comprehensive lifting of all UN Security Council sanctions as well as multilateral and national sanctions related to Iran’s nuclear programme, including steps on access in areas of trade, technology, finance, and energy.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
-        </div>
-      </div>
-
-      <div class="paragraph">
-        <div class="section">ii.</div>
-        The full implementation of this JCPOA will ensure the exclusively peaceful nature of Iran's nuclear programme.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
-        </div>
-      </div>
-
-      <div class="paragraph">
-        <div class="section">iii.</div>
-        Iran reaffirms that under no circumstances will Iran ever seek, develop or acquire any nuclear weapons.
-        <div class="element_actions">
-          <a>Suspicious</a><BR/>
-          <a>Important</a><BR/>
-          <a>Fluff</a><BR/>
-        </div>
+        {{element.body}}
       </div>
     </div>
-
   </div>
-
-
 </div>
