@@ -35,8 +35,13 @@ app.config(function ($provide, $stateProvider, $urlRouterProvider, $authProvider
   $stateProvider
     .state('root', {
       url: '/',
-      templateUrl: 'views/main.html',
-      controller: 'MainCtrl'
+      templateUrl: 'views/home.html',
+      controller: 'HomeCtrl'
+    })
+    .state('doc', {
+      url: '/doc/:id',
+      templateUrl: 'views/doc.html',
+      controller: 'DocCtrl'
     });
 
   // Configure authentication endpoints / prefix

@@ -1,0 +1,174 @@
+
+@import "fonts";
+
+body {
+    padding: 0 0 60px 0;
+    maring: 0px;
+    font-family: CircularStd-Black;
+}
+
+.full {
+	width: 100%;
+}
+
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.page {
+
+	.head {
+		padding: 40px 60px;
+
+		.nav {
+			display: inline-block;
+
+			div {
+				float: left;
+				padding: 10px 20px;
+				/* LOGIN / REGISTER: */
+				font-family: CircularStd-Book;
+				font-size: 13px;
+				color: #ACACAC;
+				letter-spacing: 1.38px;
+				line-height: 22px;
+
+				a {
+					color: #ACACAC;	
+				}
+			}
+		}
+	}
+	
+	.title {
+		font-family: CircularStd-Black;
+
+		&.logo {
+			/* GITIZEN: */
+			font-family: CircularStd-Black;
+			font-size: 26px;
+			color: #000000;
+			letter-spacing: 2.76px;
+			line-height: 51px;
+		}
+
+		&.big {
+			/* GITIZEN: */
+			font-size: 57px;
+			color: #000000;
+			letter-spacing: 4px;
+			line-height: 65px;
+		}
+
+		&.sub {
+			/* Government Documents: */
+			opacity: 0.47;
+			font-family: HelveticaNeue-Medium;
+			font-size: 18px;
+			color: #464646;
+			line-height: 21px;
+		}
+	}
+	
+	.doc_boxes {
+		margin: 0px auto;
+		text-align: center;
+
+		.doc_box {
+			padding: 5px;
+			width: 250px;
+			height: 250px;
+			margin: 20px;
+			display: inline-block;
+			position: relative;
+			cursor: pointer;
+
+			/* Mask: */
+			background-color: #FFD23A;
+			box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.18);
+
+			&:hover {
+				background-color: #FFDF3A;
+				box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.2);
+
+				/*
+				padding: 7px 5px 5px 7px;
+				*/
+
+				.title {
+					color: #000;
+				}
+
+				.action_count {
+					opacity: 0.8;
+				}
+			}
+
+			&.suggest {
+				background: #FBFBFB;
+				border: 1px solid #E7E7E7;
+				box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.18);
+			}
+
+			.title {
+				left: 10%;
+				position: absolute;
+				width: 80%;
+				padding: 30px 30px 0px 30px;
+			
+				/* THE IRAN NUCLEAR AGR: */
+				font-family: CircularStd-Black;
+				font-size: 21px;
+				color: #444444;
+				letter-spacing: 1.04px;
+				line-height: 28px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			.action_count {
+				position: absolute;
+				bottom: 10px;
+
+				display: inline-block;
+
+				font-family: CircularStd-Black;
+				font-size: 30px;
+				line-height: 42px;
+				opacity: 0.8;
+
+				&.up {
+					color: #FFFFFF;
+					right: 10px;
+				}
+
+				&.down {
+					color: #282828;
+					left: 10px;
+				}
+			}
+		}
+
+	}
+
+	.footer {
+		hr {
+			width: 200px;
+			color: #979797;
+		}
+		/* Copyright, 2015: */
+		font-family: CircularStd-Book;
+		font-size: 13px;
+		color: #ACACAC;
+		letter-spacing: 1.38px;
+		line-height: 22px;
+	}
+
+
+
+}
+

@@ -8,7 +8,7 @@
  * Controller of the demoApp
  */
 angular.module('demoApp')
-  .controller('MainCtrl', ['$scope', '$http', '$modal', '$state', '$auth', '$stateParams',
+  .controller('DocCtrl', ['$scope', '$http', '$modal', '$state', '$auth', '$stateParams',
    function ($scope, $http, $modal, $state, $auth, $stateParams) {
   	var modalInstance = null;
     

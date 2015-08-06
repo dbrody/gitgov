@@ -1,0 +1,60 @@
+<div class="page">
+  <div class="doc_title_panel">
+    <div class="title logo">GITIZEN</div>
+
+    <BR><BR>
+
+    <div class="title big right">THE IRAN NUCLEAR AGREEMENT</div>
+    <div class="title sub right">{{document.name}}<BR>{{document.date}}</div>
+
+    <BR><BR>
+
+    <div class="votes right">
+      <div>
+        156 <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="down">23 <span class="glyphicon glyphicon-exclamation-sign"></span>
+        </span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr>
+      Copyright, 2015
+    </div>
+  </div>
+
+  <div class="doc_container">
+
+    <div class="head right">
+      <div class="nav">
+        <div class="item"><a href="#">LOGIN / REGISTER</a></div>
+        <div class="item"><a href="#">ABOUT</a></div>
+        <div class="item"><a href="#">CONTACT</a></div>
+      </div>
+    </div>
+
+    <div class="content_container">
+      <div class="document">
+        <div class="content">
+          <div ng-repeat="element in document_root" ng-if="element.level > 0 && element.body.length > 0" class="level_{{element.level}}">
+            <div class="section">{{element.numeral}}</div>
+            <div class="element_body">
+              {{element.body}}
+              <div class="element_stats" ng-if="element.level == 5">
+                <div style="width: {{20 + element.importances*10}}px;">{{element.importances}}</div>
+                <div style="width: {{20 + element.suspicions*10}}px;" class="down" >{{element.suspicions}}</div>
+              </div>
+            </div>
+            <div class="element_actions" ng-if="element.level == 5">
+              <span class="glyphicon glyphicon-star" aria-hidden="true"
+                ng-click="addImportance(element)"></span>
+              <BR>
+              <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"
+                ng-click="addSuspicion(element)"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

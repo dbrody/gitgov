@@ -1,0 +1,48 @@
+.doc_title_panel {
+
+	padding: 20px 60px 20px 30px;
+	
+	position: fixed;
+	z-index: 10;
+	bottom: 0px;
+	top: 0px;
+	left: 0px;
+	width: 40%;
+
+	/* Mask: */
+	background: #FFD23A;
+	box-shadow: 1px 1px 10px 0px rgba(0,0,0,0.18);
+
+	.footer {
+		
+		hr {
+			width: 100px;
+			margin: 4px 0px;
+			padding: 0px;
+			opacity: 0.4;
+			color: FFFFFF;
+		}	
+
+		position: absolute;
+		color: #FFF;
+		bottom: 20px;
+	}
+
+	.votes {
+		font-family: CircularStd-Black;
+		font-size: 33px;
+		color: #282828;
+		line-height: 42px;
+
+		.down {
+			color: #FFF;
+		}
+	}
+}
+
+.doc_container {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 60%;
+}
