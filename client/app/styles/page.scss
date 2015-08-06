@@ -7,6 +7,18 @@ body {
     font-family: CircularStd-Black;
 }
 
+@media (max-width: 1024px) {
+
+	.page {
+		.title {
+			&.big {
+				font-size: 20px;
+			}
+		}
+	}
+
+}
+
 .full {
 	width: 100%;
 }
@@ -57,20 +69,35 @@ body {
 		}
 
 		&.big {
-			/* GITIZEN: */
-			font-size: 57px;
 			color: #000000;
 			letter-spacing: 4px;
-			line-height: 65px;
+
+			/* GITIZEN: */
+			@media screen and (max-width: 1024px) {
+				font-size: 20px;
+				line-height: 25px;
+			}
+			@media screen and (min-width: 1024px) {
+				font-size: 50px;
+				line-height: 55px;
+			}
 		}
 
 		&.sub {
 			/* Government Documents: */
 			opacity: 0.47;
 			font-family: HelveticaNeue-Medium;
-			font-size: 18px;
 			color: #464646;
-			line-height: 21px;
+
+			@media screen and (max-width: 1024px) {
+				font-size: 12px;
+				line-height: 14px;
+			}
+
+			@media screen and (min-width: 1024px) {
+				font-size: 18px;
+				line-height: 21px;
+			}
 		}
 	}
 	

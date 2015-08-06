@@ -14,11 +14,22 @@ angular.module('demoApp')
     
     $scope.document_root = null;
 
+    $scope.total_important = 0;
+    $scope.total_suspicious = 0;
+
     $http.get('/api/v1/document_elements')
       .success(function(data, status, headers, config){
         console.log(data);
         $scope.document = data['document']
         $scope.document_root = data['root'];
+
+        $scope.total_important = 0;
+        $scope.total_suspicious = 0;
+        for(var i in $scope.document_root){
+          var element = $scope.document_root[i];
+          $scope.total_important += parseInt(element.importances);
+          $scope.total_suspicious += parseInt(element.suspicions);
+        }
       })
       .error(function(data, status, headers, config){
 
@@ -27,12 +38,14 @@ angular.module('demoApp')
     $scope.addImportance = function(element){
       $scope.createAction(element, 'important', function(data){
         element.importances += 1;
+        $scope.total_important += 1;
       });
     };
 
     $scope.addSuspicion = function(element){
       $scope.createAction(element, 'suspicion', function(data){
         element.suspicions += 1;
+        $scope.total_suspicious += 1;
       });
     };
 
