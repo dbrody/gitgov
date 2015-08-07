@@ -14,8 +14,7 @@ angular.module('demoApp')
     
     $scope.document_root = null;
 
-    $scope.total_important = 0;
-    $scope.total_suspicious = 0;
+    $scope.total_actions = 0;
 
     $http.get('/api/v1/document_elements')
       .success(function(data, status, headers, config){
@@ -23,13 +22,10 @@ angular.module('demoApp')
         $scope.document = data['document']
         $scope.document_root = data['root'];
 
-        $scope.total_important = 0;
-        $scope.total_suspicious = 0;
-        for(var i in $scope.document_root){
-          var element = $scope.document_root[i];
-          $scope.total_important += parseInt(element.importances);
-          $scope.total_suspicious += parseInt(element.suspicions);
-        }
+        $scope.total_actions = 0;
+        $scope.total_actions += $scope.document.suspicious_count;
+        $scope.total_actions += $scope.document.fluff_count;        
+        $scope.total_actions += $scope.document.important_count;
       })
       .error(function(data, status, headers, config){
 
@@ -39,19 +35,27 @@ angular.module('demoApp')
       $scope.createAction(element, 'important', function(data){
         element.importances += 1;
         $scope.total_important += 1;
+        $scope.document_root.important_count++;
+        $scope.document.important_count++;
+        $scope.total_actions++;
       });
     };
 
     $scope.addSuspicion = function(element){
       $scope.createAction(element, 'suspicion', function(data){
         element.suspicions += 1;
-        $scope.total_suspicious += 1;
+        $scope.document_root.suspicious_count++;
+        $scope.document.suspicious_count++;
+        $scope.total_actions++;
       });
     };
 
     $scope.addFluff = function(element){
       $scope.createAction(element, 'fluff', function(data){
         element.fluffs += 1;
+        $scope.document_root.fluff_count++;
+        $scope.document.fluff_count++;
+        $scope.total_actions++;
       });
     };
 

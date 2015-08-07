@@ -12,6 +12,7 @@ task :document_parse => :environment do
 
 	document_elements = {
 		:title => nil,
+		:subtitle => '',
 		:date => nil,
 		:elements => []
 	}
@@ -39,6 +40,9 @@ task :document_parse => :environment do
 
 		if label == "[TITLE]"
 			document_elements[:title] = parts[1..-1].join(" ")
+			next
+		elsif label == "[SUBTITLE]"
+			document_elements[:subtitle] = parts[1..-1].join(" ")
 			next
 		elsif label == "[DATE]"
 			document_elements[:date] = parts[1..-1].join(" ")
@@ -96,7 +100,8 @@ end
 
 def parse_document_root(root)
 	d = Document.where({name: root[:title]}).first_or_create({
-		:date => root[:date]
+		:date => root[:date],
+		:subtitle => root[:subtitle]
 	})
 
 	print root[:title]

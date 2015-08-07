@@ -1,6 +1,6 @@
 <div class="page">
   <div class="doc_title_panel">
-    <div class="title logo">GITIZEN</div>
+    <div class="title logo"><A ui-sref="root">GITIZEN</A></div>
 
     <BR><BR>
 
@@ -11,8 +11,8 @@
 
     <div class="votes right">
       <div>
-        {{total_important}} <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="down">{{total_suspicious}} <span class="glyphicon glyphicon-exclamation-sign"></span>
+        {{document.important_count}} <span class="glyphicon glyphicon-star"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="down">{{document.suspicious_count}} <span class="glyphicon glyphicon-exclamation-sign"></span>
         </span>
       </div>
     </div>
@@ -41,8 +41,8 @@
             <div class="element_body">
               {{element.body}}
               <div class="element_stats" ng-if="element.level == 5">
-                <div style="width: {{20 + (element.importances/(total_important+total_suspicious))*300}}px;">{{element.importances}}</div>
-                <div style="width: {{20 + (element.suspicions/(total_important+total_suspicious))*300}}px;" class="down" >{{element.suspicions}}</div>
+                <div style="width: {{20 + (element.importances/total_actions)*300}}px;">{{element.importances}}</div>
+                <div style="width: {{20 + (element.suspicions/total_actions)*300}}px;" class="down" >{{element.suspicions}}</div>
               </div>
             </div>
             <div class="element_actions" ng-if="element.level == 5">

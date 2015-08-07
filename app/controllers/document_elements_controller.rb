@@ -66,21 +66,31 @@ class DocumentElementsController < ApplicationController
     end
 
     type = params[:type]
+    increment_field = nil
 
     if type == "important"
       newaction = ActionImportance.new(:document_element => @element)
+      increment_field = "important_count"
     elsif type == "fluff"
       newaction = ActionFluff.new(:document_element => @element)
+      increment_field = "fluff_count"
     elsif type == "suspicion"
       newaction = ActionSuspicion.new(:document_element => @element)
+      increment_field = "suspicious_count"
     else
       render json: params, status: :unprocessable_entity
       return
     end
 
-    if newaction.save
-        render json: newaction
-    else
+    begin
+      DocumentElement.transaction do
+        newaction.save!
+        @element.increment!(increment_field)
+        @element.document.increment!(increment_field)
+      end
+
+      render json: newaction
+    rescue ActiveRecord::RecordInvalid => invalid
       render json: newaction.errors, status: :unprocessable_entity
     end
   end

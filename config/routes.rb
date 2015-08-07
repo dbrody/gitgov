@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   scope '/api' do
     scope '/v1' do
       resources :document_elements
+      resources :documents
       post '/document_elements/:id/addaction' => 'document_elements#create_action'
     end
   end

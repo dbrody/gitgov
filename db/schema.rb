@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150726172236) do
+ActiveRecord::Schema.define(version: 20150807004656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,16 +50,19 @@ ActiveRecord::Schema.define(version: 20150726172236) do
   add_index "action_suspicions", ["user_id"], name: "index_action_suspicions_on_user_id", using: :btree
 
   create_table "document_elements", force: true do |t|
-    t.integer  "document_id", limit: 8
+    t.integer  "document_id",      limit: 8
     t.string   "type"
-    t.integer  "parent_id",   limit: 8
+    t.integer  "parent_id",        limit: 8
     t.integer  "position"
     t.string   "numeral"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "lft",         limit: 8, null: false
-    t.integer  "rgt",         limit: 8, null: false
+    t.integer  "lft",              limit: 8,             null: false
+    t.integer  "rgt",              limit: 8,             null: false
+    t.integer  "suspicious_count",           default: 0, null: false
+    t.integer  "important_count",            default: 0, null: false
+    t.integer  "fluff_count",                default: 0, null: false
   end
 
   add_index "document_elements", ["document_id"], name: "index_document_elements_on_document_id", using: :btree
@@ -72,6 +75,10 @@ ActiveRecord::Schema.define(version: 20150726172236) do
     t.datetime "updated_at"
     t.integer  "root_element"
     t.string   "date"
+    t.integer  "suspicious_count", default: 0,  null: false
+    t.integer  "important_count",  default: 0,  null: false
+    t.integer  "fluff_count",      default: 0,  null: false
+    t.string   "subtitle",         default: "", null: false
   end
 
   create_table "moments", force: true do |t|

@@ -59,6 +59,10 @@ body {
 	.title {
 		font-family: CircularStd-Black;
 
+		a {
+			color: #000;
+		}
+
 		&.logo {
 			/* GITIZEN: */
 			font-family: CircularStd-Black;
@@ -66,11 +70,13 @@ body {
 			color: #000000;
 			letter-spacing: 2.76px;
 			line-height: 51px;
+			text-transform: uppercase;
 		}
 
 		&.big {
 			color: #000000;
 			letter-spacing: 4px;
+			text-transform: uppercase;
 
 			/* GITIZEN: */
 			@media screen and (max-width: 1024px) {
@@ -113,6 +119,7 @@ body {
 			display: inline-block;
 			position: relative;
 			cursor: pointer;
+			overflow: hidden;
 
 			/* Mask: */
 			background-color: #FFD23A;
@@ -143,9 +150,10 @@ body {
 
 			.title {
 				left: 10%;
-				position: absolute;
 				width: 80%;
 				padding: 30px 30px 0px 30px;
+				text-transform: uppercase;
+
 			
 				/* THE IRAN NUCLEAR AGR: */
 				font-family: CircularStd-Black;
@@ -155,6 +163,12 @@ body {
 				line-height: 28px;
 				display: inline-block;
 				vertical-align: middle;
+
+				&.sub {
+					padding-top: 10px;
+					font-size: 12px;
+					line-height: 14px;
+				}
 			}
 
 			.action_count {

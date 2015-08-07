@@ -14,9 +14,9 @@ class DocumentElement < ActiveRecord::Base
   		numeral: numeral,
   		body: body,
   		elements: [],
-      fluffs: action_fluffs.count,
-      suspicions: action_suspicions.count,
-      importances: action_importances.count
+      fluffs: fluff_count || 0,
+      suspicions: suspicious_count,
+      importances: important_count
   	}
   end
 
